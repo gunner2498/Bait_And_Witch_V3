@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bait_and_witch_v3.HelloController">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/P1-Backdrop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Slot2" accessibleText="0" fitHeight="184.0" fitWidth="182.0" layoutX="819.0" layoutY="78.0" onMouseClicked="#S2Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot3" accessibleText="0" fitHeight="184.0" fitWidth="182.0" layoutX="1001.0" layoutY="78.0" onMouseClicked="#S3Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot1" accessibleText="0" fitHeight="184.0" fitWidth="182.0" layoutX="637.0" layoutY="78.0" onMouseClicked="#S1Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot4" accessibleText="0" fitHeight="184.0" fitWidth="182.0" layoutX="637.0" layoutY="262.0" onMouseClicked="#S4Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot5" accessibleText="0" fitHeight="184.0" fitWidth="182.0" layoutX="819.0" layoutY="262.0" onMouseClicked="#S5Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot6" accessibleText="0" fitHeight="184.0" fitWidth="182.0" layoutX="1001.0" layoutY="262.0" onMouseClicked="#S6Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot7" accessibleText="0" fitHeight="184.0" fitWidth="190.0" layoutX="633.0" layoutY="446.0" onMouseClicked="#S7Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot8" accessibleText="0" fitHeight="184.0" fitWidth="182.0" layoutX="819.0" layoutY="446.0" onMouseClicked="#S8Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="73.0" fitWidth="71.0" layoutX="268.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot9" accessibleText="0" fitHeight="184.0" fitWidth="190.0" layoutX="1001.0" layoutY="444.0" onMouseClicked="#S9Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView accessibleText="7" fitHeight="73.0" fitWidth="71.0" layoutX="520.0" layoutY="389.0" onMouseClicked="#P7Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-7.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="6" fitHeight="73.0" fitWidth="71.0" layoutX="339.0" layoutY="516.0" onMouseClicked="#P6Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-6.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="8" fitHeight="73.0" fitWidth="71.0" layoutX="439.0" layoutY="444.0" onMouseClicked="#P8Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-8.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="4" fitHeight="73.0" fitWidth="71.0" layoutX="312.0" layoutY="354.0" onMouseClicked="#P4Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-4.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="5" fitHeight="73.0" fitWidth="71.0" layoutX="527.0" layoutY="480.0" onMouseClicked="#P5Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-5.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="3" fitHeight="73.0" fitWidth="71.0" layoutX="339.0" layoutY="270.0" onMouseClicked="#P3Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-3.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="2" fitHeight="73.0" fitWidth="71.0" layoutX="403.0" layoutY="353.0" onMouseClicked="#P2Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-2.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="491.0" layoutY="287.0" onMouseClicked="#P1Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-1.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="9" fitHeight="71.0" fitWidth="71.0" layoutX="322.0" layoutY="433.0" onMouseClicked="#P9Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP1-9.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ActiveSlot" fitHeight="149.0" fitWidth="167.0" layoutX="327.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="383.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active" wrappingWidth="78.279296875" />
+      <Label fx:id="EndStatement" layoutX="718.0" prefHeight="73.0" prefWidth="515.0" textFill="#29dfff">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="CastButton" layoutX="432.0" layoutY="274.0" mnemonicParsing="false" onMouseClicked="#CastClick" text="Cast">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
