@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -40,7 +35,7 @@
             <Image url="@../../../Assets/8.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="SS4" accessibleText="10" fitHeight="172.0" fitWidth="172.0" layoutX="588.0" layoutY="211.0" onMouseClicked="#S4Click" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="SS4" accessibleText="10" fitHeight="172.0" fitWidth="172.0" layoutX="773.0" layoutY="31.0" onMouseClicked="#S4Click" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/10.png" />
          </image>
@@ -55,7 +50,7 @@
             <Image url="@../../../Assets/5.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="SS7" accessibleText="14" fitHeight="172.0" fitWidth="172.0" layoutX="773.0" layoutY="29.0" onMouseClicked="#S7Click" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="SS7" accessibleText="14" fitHeight="172.0" fitWidth="172.0" layoutX="588.0" layoutY="212.0" onMouseClicked="#S7Click" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/14.png" />
          </image>

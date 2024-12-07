@@ -87,7 +87,7 @@ public class Game3Controller {
             DialogueBox.setVisible(true);
             StageG3.setMouseTransparent(true);
             DialogueBox.setMouseTransparent(true);
-            StageG3.setImage(new Image(getClass().getResource("/assets/Set45.png").toString()));
+            StageG3.setImage(new Image(getClass().getResource("/assets/G3S.png").toString()));
             DialogueBox.setText("“Hmm…Not moon water, more like…star water. Interesting. I’ll allow it.”");
             EndStatement.setText("Success");
 
@@ -115,7 +115,7 @@ public class Game3Controller {
         else if(FailCount == 3){
 
 
-            StageG3.setImage(new Image(getClass().getResource("/assets/G3F3.png").toString()));
+            StageG3.setImage(new Image(getClass().getResource("/assets/G3F4.png").toString()));
             DialogueBox.setText("“How disappointing.”");
             cont = 2;
         }

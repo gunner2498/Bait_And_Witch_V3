@@ -15,12 +15,12 @@
                 <Image url="@../../../Assets/TitleScreen.png" />
             </image>
         </ImageView>
-      <Label fx:id="DialogueBox" layoutX="46.0" layoutY="670.0" prefHeight="40.0" prefWidth="1106.0" text=" ">
+      <Label fx:id="DialogueBox" alignment="TOP_LEFT" layoutX="14.0" layoutY="665.0" prefHeight="55.0" prefWidth="1162.0" text=" ">
                  style="-fx-text-fill: white; -fx-background-color: black;
               -fx-border-color: white; -fx-border-width: 2px;
               -fx-font-size: 20px; -fx-padding: 10px;" />
          <font>
-            <Font size="28.0" />
+            <Font size="22.0" />
          </font>
          <effect>
             <DropShadow spread="0.54">
