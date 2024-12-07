@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bait_and_witch_v3.Game2Controller">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/P2-Backdrop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Slot2" accessibleText="0" fitHeight="71.0" fitWidth="87.0" layoutX="340.0" layoutY="316.0" onMouseClicked="#S2Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot3" accessibleText="0" fitHeight="73.0" fitWidth="87.0" layoutX="793.0" layoutY="226.0" onMouseClicked="#S3Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot1" accessibleText="0" fitHeight="71.0" fitWidth="87.0" layoutX="418.0" layoutY="227.0" onMouseClicked="#S1Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot4" accessibleText="0" fitHeight="71.0" fitWidth="87.0" layoutX="418.0" layoutY="396.0" onMouseClicked="#S4Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot6" accessibleText="0" fitHeight="73.0" fitWidth="87.0" layoutX="793.0" layoutY="399.0" onMouseClicked="#S6Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot7" accessibleText="0" fitHeight="71.0" fitWidth="87.0" layoutX="605.0" layoutY="191.0" onMouseClicked="#S7Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot8" accessibleText="0" fitHeight="71.0" fitWidth="87.0" layoutX="612.0" layoutY="437.0" onMouseClicked="#S8Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Slot9" accessibleText="0" fitHeight="73.0" fitWidth="87.0" layoutX="862.0" layoutY="309.0" onMouseClicked="#S9Click" pickOnBounds="true" preserveRatio="true" />
+      <ImageView accessibleText="7" fitHeight="73.0" fitWidth="71.0" layoutX="21.0" layoutY="614.0" onMouseClicked="#O7Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd7.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="6" fitHeight="73.0" fitWidth="71.0" layoutX="21.0" layoutY="360.0" onMouseClicked="#O4Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd4.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="8" fitHeight="73.0" fitWidth="71.0" layoutX="21.0" layoutY="444.0" onMouseClicked="#G3Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem3.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="4" fitHeight="73.0" fitWidth="71.0" layoutX="21.0" layoutY="191.0" onMouseClicked="#O5Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd5.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="5" fitHeight="73.0" fitWidth="71.0" layoutX="21.0" layoutY="529.0" onMouseClicked="#G4Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem4.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="3" fitHeight="73.0" fitWidth="71.0" layoutX="21.0" layoutY="22.0" onMouseClicked="#G1Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem1.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="2" fitHeight="73.0" fitWidth="71.0" layoutX="21.0" layoutY="106.0" onMouseClicked="#O1Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd1.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="22.0" onMouseClicked="#O2Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd2.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="9" fitHeight="71.0" fitWidth="71.0" layoutX="21.0" layoutY="274.0" onMouseClicked="#G6Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ActiveSlot" fitHeight="149.0" fitWidth="167.0" layoutX="145.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="163.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active" wrappingWidth="78.279296875" />
+      <Label fx:id="EndStatement" layoutX="495.0" layoutY="21.0" prefHeight="73.0" prefWidth="515.0" textFill="#29dfff">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="109.0" onMouseClicked="#G7Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem7.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="191.0" onMouseClicked="#G2Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem2.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="274.0" onMouseClicked="#O6Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd6.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="360.0" onMouseClicked="#O8Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd8.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="444.0" onMouseClicked="#G5Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem5.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="529.0" onMouseClicked="#O3Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Odd3.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleText="1" fitHeight="73.0" fitWidth="71.0" layoutX="1191.0" layoutY="614.0" onMouseClicked="#G8Click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/PP2-Gem8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="CastButton" fitHeight="84.0" fitWidth="141.0" layoutX="592.0" layoutY="312.0" onMouseClicked="#CastClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/CastButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="StageG2" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <ImageView fx:id="NextButton" fitHeight="84.0" fitWidth="127.0" layoutX="1052.0" layoutY="614.0" onMouseClicked="#NextClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/NextButton.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="DialogueBox" layoutX="46.0" layoutY="670.0" prefHeight="40.0" prefWidth="1106.0" text=" ">
+         style="-fx-text-fill: white; -fx-background-color: black;
+         -fx-border-color: white; -fx-border-width: 2px;
+         -fx-font-size: 20px; -fx-padding: 10px;" />
+         <font>
+            <Font size="28.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.54">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
