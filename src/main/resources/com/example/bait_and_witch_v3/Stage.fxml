@@ -23,7 +23,7 @@
             <Font size="22.0" />
          </font>
          <effect>
-            <DropShadow spread="0.54">
+            <DropShadow spread="0.85">
                <color>
                   <Color red="1.0" green="1.0" blue="1.0" />
                </color>

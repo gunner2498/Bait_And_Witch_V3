@@ -15,7 +15,7 @@ import javax.swing.*;
 import java.io.IOException;
 
 
-public class StageController {
+public class StageController { // Main stage for bulk of graphics and dialogue handling
 
 
 
@@ -23,16 +23,16 @@ public class StageController {
     int currentGame;
 
     @FXML
-    private ImageView CenterStage;
+    private ImageView CenterStage; // Main image view for story board
 
     @FXML
-    private Label DialogueBox;
+    private Label DialogueBox; // main dialogue text box
 
     @FXML
-    private ImageView NextBTN;
+    private ImageView NextBTN; // proceed button
 
     @FXML
-    void ScriptClick(MouseEvent event) {
+    void ScriptClick(MouseEvent event) { //handles advancing the script case to the next instance
         ScriptPlace++;
         Script();
     }
@@ -40,7 +40,7 @@ public class StageController {
     void Script(){
 
 
-        switch (ScriptPlace) {
+        switch (ScriptPlace) { //switch case increments through the script and will send to individual game controllers as needed
             case 1:
                 CenterStage.setImage(new Image(getClass().getResource("/assets/Set15.png").toString()));
                 DialogueBox.setText("Adipompen, Academy of the Arcane School for the magically gifted");
@@ -197,38 +197,38 @@ public class StageController {
 
         }
 
-    public void updateGameResult(boolean success) {
+    public void updateGameResult(boolean success) { //handles game 1 sendback and win/loss case
         if (success) {
             DialogueBox.setText("Game 1 completed successfully! Proceeding...");
-            ScriptPlace = 18; // Set to the next case after Game 1 success
+            ScriptPlace = 18;
         }
         else {
             DialogueBox.setText("Game 1 failed. Moving on...");
-            ScriptPlace = 18; // Or another appropriate value if failure has a different branch
+            ScriptPlace = 18;
         }
         Script(); // Automatically continue the script after updating ScriptPlace
     }
 
-    public void updateGameResult2(boolean success2) {
+    public void updateGameResult2(boolean success2) { //handles game 2 sendback and win/loss case
         if (success2) {
             DialogueBox.setText("Game 2 completed successfully! Proceeding...");
-            ScriptPlace = 29; // Set to the next case after Game 1 success
+            ScriptPlace = 29;
         }
         else {
             DialogueBox.setText("Game 2 failed. Moving on...");
-            ScriptPlace = 30; // Or another appropriate value if failure has a different branch
+            ScriptPlace = 30;
         }
         Script(); // Automatically continue the script after updating ScriptPlace
     }
 
-    public void updateGameResult3(boolean success3) {
+    public void updateGameResult3(boolean success3) { //handles game 3 sendback and win/loss case
         if (success3) {
             DialogueBox.setText("Game 3 completed successfully! Proceeding...");
-            ScriptPlace = 36; // Set to the next case after Game 1 success
+            ScriptPlace = 36;
         }
         else {
             DialogueBox.setText("Game 3 failed. Moving on...");
-            ScriptPlace = 36; // Or another appropriate value if failure has a different branch
+            ScriptPlace = 36;
         }
         Script(); // Automatically continue the script after updating ScriptPlace
     }
@@ -238,7 +238,7 @@ public class StageController {
 
 
 
-    void OpenGame1() {
+    void OpenGame1() { //method used to open game 1 and close stage
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Game1.fxml"));
             Scene game1Scene = new Scene(loader.load());
@@ -252,7 +252,7 @@ public class StageController {
             DialogueBox.setText("Error loading Game1 scene.");
         }
     }
-    void OpenGame2() {
+    void OpenGame2() { //method used to open game 2 and close stage
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Game2.fxml"));
             Scene game2Scene = new Scene(loader.load());
@@ -266,7 +266,7 @@ public class StageController {
             DialogueBox.setText("Error loading Game2 scene.");
         }
     }
-    void OpenGame3() {
+    void OpenGame3() { //method used to open game 3 and close stage
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Game3.fxml"));
             Scene game3Scene = new Scene(loader.load());

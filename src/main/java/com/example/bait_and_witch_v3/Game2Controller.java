@@ -62,7 +62,7 @@ public class Game2Controller {
 
 
     @FXML
-    void CastClick(MouseEvent event) {
+    void CastClick(MouseEvent event) { // enter button to see if puzzle is correct
         if ((Slot1.getAccessibleText().equals("4") && Slot2.getAccessibleText().equals("4") && Slot3.getAccessibleText().equals("4") && Slot4.getAccessibleText().equals("4") && Slot9.getAccessibleText().equals("4") && Slot6.getAccessibleText().equals("4") && Slot7.getAccessibleText().equals("4") && Slot8.getAccessibleText().equals("4") && Slot9.getAccessibleText().equals("4"))){
             StageG2.setVisible(true);
             DialogueBox.setVisible(true);
@@ -82,7 +82,7 @@ public class Game2Controller {
         }
     }
 
-    void Fail(){
+    void Fail(){ // fail handling for the three seperate fails allowed and then logic to send back to main stage
         if(FailCount == 1){
             StageG2.setImage(new Image(getClass().getResource("/assets/G2F1.png").toString()));
             DialogueBox.setText("“Concentrate harder, Ms. Morgana.”");
@@ -110,7 +110,7 @@ public class Game2Controller {
     }
 
     @FXML
-    void NextClick(MouseEvent event) {
+    void NextClick(MouseEvent event) {  // next button to get through cutscenes, send success/fail conditions through
         if(((FailCount == 3) && cont == 0) || ((FailCount == 0 && EndStatement.equals("Success")) )) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("Stage.fxml"));
@@ -138,7 +138,7 @@ public class Game2Controller {
         }
     }
 
-    void returnToStage2(boolean success2) {
+    void returnToStage2(boolean success2) {//return to stage logic{
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Stage.fxml"));
             Stage stage = (Stage) StageG2.getScene().getWindow(); // Get current stage
@@ -157,7 +157,7 @@ public class Game2Controller {
             DialogueBox.setText("Error returning to the main stage.");
         }
     }
-
+//Puzzle 2 logic/handling
     @FXML
     void G1Click(MouseEvent event) {
         ActiveSlot.setImage(new Image(getClass().getResource("/assets/PP2-Gem1.png").toString()));

@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class MainApp extends Application {
+public class MainApp extends Application { // Main package on open
 
     @Override
     public void start(Stage primaryStage) throws Exception {

@@ -64,7 +64,7 @@ public class Game1Controller {
     int cont = 0;
 
     @FXML
-    void CastClick(MouseEvent event) {
+    void CastClick(MouseEvent event) { // enter button to see if puzzle is correct
         if ((Slot1.getAccessibleText().equals("1") && Slot2.getAccessibleText().equals("2") && Slot3.getAccessibleText().equals("3") &&
                 Slot4.getAccessibleText().equals("4") && Slot5.getAccessibleText().equals("5") && Slot6.getAccessibleText().equals("6") &&
                 Slot7.getAccessibleText().equals("7") && Slot8.getAccessibleText().equals("8") && Slot9.getAccessibleText().equals("9"))) {
@@ -83,7 +83,7 @@ public class Game1Controller {
         }
     }
 
-    void Fail() {
+    void Fail() { // fail handling for the three seperate fails allowed and then logic to send back to main stage
         if (FailCount == 1) {
             StageG1.setImage(new Image(getClass().getResource("/assets/G1F12.png").toString()));
             DialogueBox.setText("“Hmm…Try again.”");
@@ -107,7 +107,7 @@ public class Game1Controller {
         }
     }
 
-    void returnToStage(boolean success) {
+    void returnToStage(boolean success){ //return to stage logic{
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Stage.fxml"));
             Stage stage = (Stage) StageG1.getScene().getWindow();
@@ -129,7 +129,7 @@ public class Game1Controller {
 
 
     @FXML
-    void NextClick(MouseEvent event) {
+    void NextClick(MouseEvent event) {// next button to get through cutscenes, send success/fail conditions through
         if (((FailCount == 3) && cont == 0) || ((FailCount == 0 && EndStatement.equals("Success")) )) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("Stage.fxml"));
@@ -156,6 +156,8 @@ public class Game1Controller {
         }
     }
 
+
+    //Puzzle logic/Handling
     @FXML
     void P1Click(MouseEvent event) {
         ActiveSlot.setImage(new Image(getClass().getResource("/assets/PP1-1.png").toString()));

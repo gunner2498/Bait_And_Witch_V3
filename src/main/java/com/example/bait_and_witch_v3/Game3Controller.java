@@ -81,7 +81,7 @@ public class Game3Controller {
 
 
     @FXML
-    void CastClick(MouseEvent event) {
+    void CastClick(MouseEvent event) { // enter button to see if puzzle is correct
         if ((SS1.getAccessibleText().equals("1") && SS2.getAccessibleText().equals("2") && SS3.getAccessibleText().equals("3") && SS4.getAccessibleText().equals("4") && SS5.getAccessibleText().equals("5") && SS6.getAccessibleText().equals("6") && SS7.getAccessibleText().equals("7") && SS8.getAccessibleText().equals("8") && SS9.getAccessibleText().equals("9") && SS10.getAccessibleText().equals("10") && SS11.getAccessibleText().equals("11") && SS12.getAccessibleText().equals("12") && SS13.getAccessibleText().equals("13") && SS14.getAccessibleText().equals("14") && SS15.getAccessibleText().equals("15")&& SS16.getAccessibleText().equals("0"))){
             StageG3.setVisible(true);
             DialogueBox.setVisible(true);
@@ -101,7 +101,7 @@ public class Game3Controller {
         }
     }
 
-    void Fail(){
+    void Fail(){// fail handling for the three seperate fails allowed and then logic to send back to main stage
         if(FailCount == 1){
             StageG3.setImage(new Image(getClass().getResource("/assets/G3F1.png").toString()));
             DialogueBox.setText("“Concentrate harder, Ms. Morgana. It is not that difficult.”");
@@ -131,7 +131,7 @@ public class Game3Controller {
     }
 
     @FXML
-    void NextClick(MouseEvent event) {
+    void NextClick(MouseEvent event) { // next button to get through cutscenes, send success/fail conditions through
         if(((FailCount == 3) && cont == 0) || ((FailCount == 0 && EndStatement.equals("Success")) )) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("Stage.fxml"));
@@ -159,7 +159,7 @@ public class Game3Controller {
         }
     }
 
-    void returnToStage3(boolean success3) {
+    void returnToStage3(boolean success3) {//return to stage logic{
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Stage.fxml"));
             Stage stage = (Stage) StageG3.getScene().getWindow(); // Get current stage
@@ -178,27 +178,27 @@ public class Game3Controller {
             DialogueBox.setText("Error returning to the main stage.");
         }
     }
-
+//puzzle 3 logic/handling
     @FXML
     void S1Click(MouseEvent event) {
-        Image SS1Image = ((ImageView) SS1).getImage();
+        Image SS1Image = SS1.getImage();
         String SS1AccessibleText = SS1.getAccessibleText();
         if (SS2.getAccessibleText().equals("0")){
 
-            ((ImageView) SS2).setImage(SS1Image);
+            SS2.setImage(SS1Image);
             SS2.setAccessibleText(SS1AccessibleText);
 
             SS1.setAccessibleText("0");
-            ((ImageView) SS1).setImage(new Image("file: P3-Backdrop.png"));
+            SS1.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS5.getAccessibleText().equals("0")){
 
-            ((ImageView) SS5).setImage(SS1Image);
+            SS5.setImage(SS1Image);
             SS5.setAccessibleText(SS1AccessibleText);
 
             SS1.setAccessibleText("0");
-            ((ImageView) SS1).setImage(new Image("file: P3-Backdrop.png"));
+            SS1.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -209,34 +209,34 @@ public class Game3Controller {
 
     @FXML
     void S2Click(MouseEvent event) {
-        Image SS2Image = ((ImageView) SS2).getImage();
+        Image SS2Image = SS2.getImage();
         String SS2AccessibleText = SS2.getAccessibleText();
 
         if (SS1.getAccessibleText().equals("0")){
 
-            ((ImageView) SS1).setImage(SS2Image);
+            SS1.setImage(SS2Image);
             SS1.setAccessibleText(SS2AccessibleText);
 
             SS2.setAccessibleText("0");
-            ((ImageView) SS2).setImage(new Image("file: P3-Backdrop.png"));
+            SS2.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS3.getAccessibleText().equals("0")){
 
-            ((ImageView) SS3).setImage(SS2Image);
+            SS3.setImage(SS2Image);
             SS3.setAccessibleText(SS2AccessibleText);
 
             SS2.setAccessibleText("0");
-            ((ImageView) SS2).setImage(new Image("file: P3-Backdrop.png"));
+            SS2.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS6.getAccessibleText().equals("0")){
 
-            ((ImageView) SS6).setImage(SS2Image);
+            SS6.setImage(SS2Image);
             SS6.setAccessibleText(SS2AccessibleText);
 
             SS2.setAccessibleText("0");
-            ((ImageView) SS2).setImage(new Image("file: P3-Backdrop.png"));
+            SS2.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -247,33 +247,33 @@ public class Game3Controller {
 
     @FXML
     void S3Click(MouseEvent event) {
-        Image SS3Image = ((ImageView) SS3).getImage();
+        Image SS3Image = SS3.getImage();
         String SS3AccessibleText = SS3.getAccessibleText();
         if (SS2.getAccessibleText().equals("0")){
 
-            ((ImageView) SS2).setImage(SS3Image);
+            SS2.setImage(SS3Image);
             SS2.setAccessibleText(SS3AccessibleText);
 
             SS3.setAccessibleText("0");
-            ((ImageView) SS3).setImage(new Image("file: P3-Backdrop.png"));
+            SS3.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS4.getAccessibleText().equals("0")){
 
-            ((ImageView) SS4).setImage(SS3Image);
+            SS4.setImage(SS3Image);
             SS4.setAccessibleText(SS3AccessibleText);
 
             SS3.setAccessibleText("0");
-            ((ImageView) SS3).setImage(new Image("file: P3-Backdrop.png"));
+            SS3.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS7.getAccessibleText().equals("0")){
 
-            ((ImageView) SS7).setImage(SS3Image);
+            SS7.setImage(SS3Image);
             SS7.setAccessibleText(SS3AccessibleText);
 
             SS3.setAccessibleText("0");
-            ((ImageView) SS3).setImage(new Image("file: P3-Backdrop.png"));
+            SS3.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -284,25 +284,25 @@ public class Game3Controller {
 
     @FXML
     void S4Click(MouseEvent event) {
-        Image SS4Image = ((ImageView) SS4).getImage();
+        Image SS4Image = SS4.getImage();
         String SS4AccessibleText = SS4.getAccessibleText();
 
         if (SS3.getAccessibleText().equals("0")){
 
-            ((ImageView) SS3).setImage(SS4Image);
+            SS3.setImage(SS4Image);
             SS3.setAccessibleText(SS4AccessibleText);
 
             SS4.setAccessibleText("0");
-            ((ImageView) SS4).setImage(new Image("file: P3-Backdrop.png"));
+            SS4.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS8.getAccessibleText().equals("0")){
 
-            ((ImageView) SS8).setImage(SS4Image);
+            SS8.setImage(SS4Image);
             SS8.setAccessibleText(SS4AccessibleText);
 
             SS4.setAccessibleText("0");
-            ((ImageView) SS4).setImage(new Image("file: P3-Backdrop.png"));
+            SS4.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -313,34 +313,34 @@ public class Game3Controller {
 
     @FXML
     void S5Click(MouseEvent event) {
-        Image SS5Image = ((ImageView) SS5).getImage();
+        Image SS5Image = SS5.getImage();
         String SS5AccessibleText = SS5.getAccessibleText();
 
         if (SS1.getAccessibleText().equals("0")){
 
-            ((ImageView) SS1).setImage(SS5Image);
+            SS1.setImage(SS5Image);
             SS1.setAccessibleText(SS5AccessibleText);
 
             SS5.setAccessibleText("0");
-            ((ImageView) SS5).setImage(new Image("file: P3-Backdrop.png"));
+            SS5.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS6.getAccessibleText().equals("0")){
 
-            ((ImageView) SS6).setImage(SS5Image);
+            SS6.setImage(SS5Image);
             SS6.setAccessibleText(SS5AccessibleText);
 
             SS5.setAccessibleText("0");
-            ((ImageView) SS5).setImage(new Image("file: P3-Backdrop.png"));
+            SS5.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS9.getAccessibleText().equals("0")){
 
-            ((ImageView) SS9).setImage(SS5Image);
+            SS9.setImage(SS5Image);
             SS9.setAccessibleText(SS5AccessibleText);
 
             SS5.setAccessibleText("0");
-            ((ImageView) SS5).setImage(new Image("file: P3-Backdrop.png"));
+            SS5.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -351,43 +351,43 @@ public class Game3Controller {
 
     @FXML
     void S6Click(MouseEvent event) {
-        Image SS6Image = ((ImageView) SS6).getImage();
+        Image SS6Image = SS6.getImage();
         String SS6AccessibleText = SS6.getAccessibleText();
 
         if (SS2.getAccessibleText().equals("0")){
 
-            ((ImageView) SS2).setImage(SS6Image);
+            SS2.setImage(SS6Image);
             SS2.setAccessibleText(SS6AccessibleText);
 
             SS6.setAccessibleText("0");
-            ((ImageView) SS6).setImage(new Image("file: P3-Backdrop.png"));
+            SS6.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS5.getAccessibleText().equals("0")){
 
-            ((ImageView) SS5).setImage(SS6Image);
+            SS5.setImage(SS6Image);
             SS5.setAccessibleText(SS6AccessibleText);
 
             SS6.setAccessibleText("0");
-            ((ImageView) SS6).setImage(new Image("file: P3-Backdrop.png"));
+            SS6.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS7.getAccessibleText().equals("0")){
 
-            ((ImageView) SS7).setImage(SS6Image);
+            SS7.setImage(SS6Image);
             SS7.setAccessibleText(SS6AccessibleText);
 
             SS6.setAccessibleText("0");
-            ((ImageView) SS6).setImage(new Image("file: P3-Backdrop.png"));
+            SS6.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS10.getAccessibleText().equals("0")){
 
-            ((ImageView) SS10).setImage(SS6Image);
+            SS10.setImage(SS6Image);
             SS10.setAccessibleText(SS6AccessibleText);
 
             SS6.setAccessibleText("0");
-            ((ImageView) SS6).setImage(new Image("file: P3-Backdrop.png"));
+            SS6.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -398,43 +398,43 @@ public class Game3Controller {
 
     @FXML
     void S7Click(MouseEvent event) {
-        Image SS7Image = ((ImageView) SS7).getImage();
+        Image SS7Image = SS7.getImage();
         String SS7AccessibleText = SS7.getAccessibleText();
 
         if (SS3.getAccessibleText().equals("0")){
 
-            ((ImageView) SS3).setImage(SS7Image);
+            SS3.setImage(SS7Image);
             SS3.setAccessibleText(SS7AccessibleText);
 
             SS7.setAccessibleText("0");
-            ((ImageView) SS7).setImage(new Image("file: P3-Backdrop.png"));
+            SS7.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS6.getAccessibleText().equals("0")){
 
-            ((ImageView) SS6).setImage(SS7Image);
+            SS6.setImage(SS7Image);
             SS6.setAccessibleText(SS7AccessibleText);
 
             SS7.setAccessibleText("0");
-            ((ImageView) SS7).setImage(new Image("file: P3-Backdrop.png"));
+            SS7.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS8.getAccessibleText().equals("0")){
 
-            ((ImageView) SS8).setImage(SS7Image);
+            SS8.setImage(SS7Image);
             SS8.setAccessibleText(SS7AccessibleText);
 
             SS7.setAccessibleText("0");
-            ((ImageView) SS7).setImage(new Image("file: P3-Backdrop.png"));
+            SS7.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS11.getAccessibleText().equals("0")){
 
-            ((ImageView) SS11).setImage(SS7Image);
+            SS11.setImage(SS7Image);
             SS11.setAccessibleText(SS7AccessibleText);
 
             SS7.setAccessibleText("0");
-            ((ImageView) SS7).setImage(new Image("file: P3-Backdrop.png"));
+            SS7.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -445,34 +445,34 @@ public class Game3Controller {
 
     @FXML
     void S8Click(MouseEvent event) {
-        Image SS8Image = ((ImageView) SS8).getImage();
+        Image SS8Image = SS8.getImage();
         String SS8AccessibleText = SS8.getAccessibleText();
 
         if (SS4.getAccessibleText().equals("0")){
 
-            ((ImageView) SS4).setImage(SS8Image);
+            SS4.setImage(SS8Image);
             SS4.setAccessibleText(SS8AccessibleText);
 
             SS8.setAccessibleText("0");
-            ((ImageView) SS8).setImage(new Image("file: P3-Backdrop.png"));
+            SS8.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS7.getAccessibleText().equals("0")){
 
-            ((ImageView) SS7).setImage(SS8Image);
+            SS7.setImage(SS8Image);
             SS7.setAccessibleText(SS8AccessibleText);
 
             SS8.setAccessibleText("0");
-            ((ImageView) SS8).setImage(new Image("file: P3-Backdrop.png"));
+            SS8.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS12.getAccessibleText().equals("0")){
 
-            ((ImageView) SS12).setImage(SS8Image);
+            SS12.setImage(SS8Image);
             SS12.setAccessibleText(SS8AccessibleText);
 
             SS8.setAccessibleText("0");
-            ((ImageView) SS8).setImage(new Image("file: P3-Backdrop.png"));
+            SS8.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -483,34 +483,34 @@ public class Game3Controller {
 
     @FXML
     void S9Click(MouseEvent event) {
-        Image SS9Image = ((ImageView) SS9).getImage();
+        Image SS9Image = SS9.getImage();
         String SS9AccessibleText = SS9.getAccessibleText();
 
         if (SS5.getAccessibleText().equals("0")){
 
-            ((ImageView) SS5).setImage(SS9Image);
+            SS5.setImage(SS9Image);
             SS5.setAccessibleText(SS9AccessibleText);
 
             SS9.setAccessibleText("0");
-            ((ImageView) SS9).setImage(new Image("file: P3-Backdrop.png"));
+            SS9.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS10.getAccessibleText().equals("0")){
 
-            ((ImageView) SS10).setImage(SS9Image);
+            SS10.setImage(SS9Image);
             SS10.setAccessibleText(SS9AccessibleText);
 
             SS9.setAccessibleText("0");
-            ((ImageView) SS9).setImage(new Image("file: P3-Backdrop.png"));
+            SS9.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS13.getAccessibleText().equals("0")){
 
-            ((ImageView) SS13).setImage(SS9Image);
+            SS13.setImage(SS9Image);
             SS13.setAccessibleText(SS9AccessibleText);
 
             SS9.setAccessibleText("0");
-            ((ImageView) SS9).setImage(new Image("file: P3-Backdrop.png"));
+            SS9.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -520,43 +520,43 @@ public class Game3Controller {
     }
     @FXML
     void S10Click(MouseEvent event) {
-        Image SS10Image = ((ImageView) SS10).getImage();
+        Image SS10Image = SS10.getImage();
         String SS10AccessibleText = SS10.getAccessibleText();
 
         if (SS6.getAccessibleText().equals("0")){
 
-            ((ImageView) SS6).setImage(SS10Image);
+            SS6.setImage(SS10Image);
             SS6.setAccessibleText(SS10AccessibleText);
 
             SS10.setAccessibleText("0");
-            ((ImageView) SS10).setImage(new Image("file: P3-Backdrop.png"));
+            SS10.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS9.getAccessibleText().equals("0")){
 
-            ((ImageView) SS9).setImage(SS10Image);
+            SS9.setImage(SS10Image);
             SS9.setAccessibleText(SS10AccessibleText);
 
             SS10.setAccessibleText("0");
-            ((ImageView) SS10).setImage(new Image("file: P3-Backdrop.png"));
+            SS10.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS11.getAccessibleText().equals("0")){
 
-            ((ImageView) SS11).setImage(SS10Image);
+            SS11.setImage(SS10Image);
             SS11.setAccessibleText(SS10AccessibleText);
 
             SS10.setAccessibleText("0");
-            ((ImageView) SS10).setImage(new Image("file: P3-Backdrop.png"));
+            SS10.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS14.getAccessibleText().equals("0")){
 
-            ((ImageView) SS14).setImage(SS10Image);
+            SS14.setImage(SS10Image);
             SS14.setAccessibleText(SS10AccessibleText);
 
             SS10.setAccessibleText("0");
-            ((ImageView) SS10).setImage(new Image("file: P3-Backdrop.png"));
+            SS10.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -567,43 +567,43 @@ public class Game3Controller {
 
     @FXML
     void S11Click(MouseEvent event) {
-        Image SS11Image = ((ImageView) SS11).getImage();
+        Image SS11Image = SS11.getImage();
         String SS11AccessibleText = SS11.getAccessibleText();
 
         if (SS7.getAccessibleText().equals("0")){
 
-            ((ImageView) SS7).setImage(SS11Image);
+            SS7.setImage(SS11Image);
             SS7.setAccessibleText(SS11AccessibleText);
 
             SS11.setAccessibleText("0");
-            ((ImageView) SS11).setImage(new Image("file: P3-Backdrop.png"));
+            SS11.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS10.getAccessibleText().equals("0")){
 
-            ((ImageView) SS10).setImage(SS11Image);
+            SS10.setImage(SS11Image);
             SS10.setAccessibleText(SS11AccessibleText);
 
             SS11.setAccessibleText("0");
-            ((ImageView) SS11).setImage(new Image("file: P3-Backdrop.png"));
+            SS11.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS12.getAccessibleText().equals("0")){
 
-            ((ImageView) SS12).setImage(SS11Image);
+            SS12.setImage(SS11Image);
             SS12.setAccessibleText(SS11AccessibleText);
 
             SS11.setAccessibleText("0");
-            ((ImageView) SS11).setImage(new Image("file: P3-Backdrop.png"));
+            SS11.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS15.getAccessibleText().equals("0")){
 
-            ((ImageView) SS15).setImage(SS11Image);
+            SS15.setImage(SS11Image);
             SS15.setAccessibleText(SS11AccessibleText);
 
             SS11.setAccessibleText("0");
-            ((ImageView) SS11).setImage(new Image("file: P3-Backdrop.png"));
+            SS11.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -614,34 +614,34 @@ public class Game3Controller {
 
     @FXML
     void S12Click(MouseEvent event) {
-        Image SS12Image = ((ImageView) SS12).getImage();
+        Image SS12Image = SS12.getImage();
         String SS12AccessibleText = SS12.getAccessibleText();
 
         if (SS8.getAccessibleText().equals("0")){
 
-            ((ImageView) SS8).setImage(SS12Image);
+            SS8.setImage(SS12Image);
             SS8.setAccessibleText(SS12AccessibleText);
 
             SS12.setAccessibleText("0");
-            ((ImageView) SS12).setImage(new Image("file: P3-Backdrop.png"));
+            SS12.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS11.getAccessibleText().equals("0")){
 
-            ((ImageView) SS11).setImage(SS12Image);
+            SS11.setImage(SS12Image);
             SS11.setAccessibleText(SS12AccessibleText);
 
             SS12.setAccessibleText("0");
-            ((ImageView) SS12).setImage(new Image("file: P3-Backdrop.png"));
+            SS12.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS16.getAccessibleText().equals("0")){
 
-            ((ImageView) SS16).setImage(SS12Image);
+            SS16.setImage(SS12Image);
             SS16.setAccessibleText(SS12AccessibleText);
 
             SS12.setAccessibleText("0");
-            ((ImageView) SS12).setImage(new Image("file: P3-Backdrop.png"));
+            SS12.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -652,25 +652,25 @@ public class Game3Controller {
 
     @FXML
     void S13Click(MouseEvent event) {
-        Image SS13Image = ((ImageView) SS13).getImage();
+        Image SS13Image = SS13.getImage();
         String SS13AccessibleText = SS13.getAccessibleText();
 
         if (SS9.getAccessibleText().equals("0")){
 
-            ((ImageView) SS9).setImage(SS13Image);
+            SS9.setImage(SS13Image);
             SS9.setAccessibleText(SS13AccessibleText);
 
             SS13.setAccessibleText("0");
-            ((ImageView) SS13).setImage(new Image("file: P3-Backdrop.png"));
+            SS13.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS14.getAccessibleText().equals("0")){
 
-            ((ImageView) SS14).setImage(SS13Image);
+            SS14.setImage(SS13Image);
             SS14.setAccessibleText(SS13AccessibleText);
 
             SS13.setAccessibleText("0");
-            ((ImageView) SS13).setImage(new Image("file: P3-Backdrop.png"));
+            SS13.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -681,34 +681,34 @@ public class Game3Controller {
 
     @FXML
     void S14Click(MouseEvent event) {
-        Image SS14Image = ((ImageView) SS14).getImage();
+        Image SS14Image = SS14.getImage();
         String SS14AccessibleText = SS14.getAccessibleText();
 
         if (SS10.getAccessibleText().equals("0")){
 
-            ((ImageView) SS10).setImage(SS14Image);
+            SS10.setImage(SS14Image);
             SS10.setAccessibleText(SS14AccessibleText);
 
             SS14.setAccessibleText("0");
-            ((ImageView) SS14).setImage(new Image("file: P3-Backdrop.png"));
+            SS14.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS13.getAccessibleText().equals("0")){
 
-            ((ImageView) SS13).setImage(SS14Image);
+            SS13.setImage(SS14Image);
             SS13.setAccessibleText(SS14AccessibleText);
 
             SS14.setAccessibleText("0");
-            ((ImageView) SS14).setImage(new Image("file: P3-Backdrop.png"));
+            SS14.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS15.getAccessibleText().equals("0")){
 
-            ((ImageView) SS15).setImage(SS14Image);
+            SS15.setImage(SS14Image);
             SS15.setAccessibleText(SS14AccessibleText);
 
             SS14.setAccessibleText("0");
-            ((ImageView) SS14).setImage(new Image("file: P3-Backdrop.png"));
+            SS14.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -719,34 +719,34 @@ public class Game3Controller {
 
     @FXML
     void S15Click(MouseEvent event) {
-        Image SS15Image = ((ImageView) SS15).getImage();
+        Image SS15Image = SS15.getImage();
         String SS15AccessibleText = SS15.getAccessibleText();
 
         if (SS11.getAccessibleText().equals("0")){
 
-            ((ImageView) SS11).setImage(SS15Image);
+            SS11.setImage(SS15Image);
             SS11.setAccessibleText(SS15AccessibleText);
 
             SS15.setAccessibleText("0");
-            ((ImageView) SS15).setImage(new Image("file: P3-Backdrop.png"));
+            SS15.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS14.getAccessibleText().equals("0")){
 
-            ((ImageView) SS14).setImage(SS15Image);
+            SS14.setImage(SS15Image);
             SS14.setAccessibleText(SS15AccessibleText);
 
             SS15.setAccessibleText("0");
-            ((ImageView) SS15).setImage(new Image("file: P3-Backdrop.png"));
+            SS15.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS16.getAccessibleText().equals("0")){
 
-            ((ImageView) SS16).setImage(SS15Image);
+            SS16.setImage(SS15Image);
             SS16.setAccessibleText(SS15AccessibleText);
 
             SS15.setAccessibleText("0");
-            ((ImageView) SS15).setImage(new Image("file: P3-Backdrop.png"));
+            SS15.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
@@ -757,25 +757,25 @@ public class Game3Controller {
 
     @FXML
     void S16Click(MouseEvent event) {
-        Image SS16Image = ((ImageView) SS16).getImage();
+        Image SS16Image = SS16.getImage();
         String SS16AccessibleText = SS16.getAccessibleText();
 
         if (SS12.getAccessibleText().equals("0")){
 
-            ((ImageView) SS12).setImage(SS16Image);
+            SS12.setImage(SS16Image);
             SS12.setAccessibleText(SS16AccessibleText);
 
             SS16.setAccessibleText("0");
-            ((ImageView) SS16).setImage(new Image("file: P3-Backdrop.png"));
+            SS16.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else if (SS15.getAccessibleText().equals("0")){
 
-            ((ImageView) SS15).setImage(SS16Image);
+            SS15.setImage(SS16Image);
             SS15.setAccessibleText(SS16AccessibleText);
 
             SS16.setAccessibleText("0");
-            ((ImageView) SS16).setImage(new Image("file: P3-Backdrop.png"));
+            SS16.setImage(new Image("file: P3-Backdrop.png"));
 
         }
         else{
